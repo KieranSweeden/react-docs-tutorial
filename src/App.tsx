@@ -1,28 +1,42 @@
-import { useState } from "react";
+import { FC, useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
 
-function Square() {
+const Square: FC = () => {
+  const [value, setValue] = useState("");
+
+  function handleClick() {
+    setValue("X");
+  }
+
+  return (
+    <button className="square" onClick={handleClick}>
+      {value}
+    </button>
+  );
+};
+
+function Board() {
   return (
     <>
       <div className="board-row">
-        <button className="square">X</button>
-        <button className="square">X</button>
-        <button className="square">X</button>
+        <Square />
+        <Square />
+        <Square />
       </div>
       <div className="board-row">
-        <button className="square">X</button>
-        <button className="square">X</button>
-        <button className="square">X</button>
+        <Square />
+        <Square />
+        <Square />
       </div>
       <div className="board-row">
-        <button className="square">X</button>
-        <button className="square">X</button>
-        <button className="square">X</button>
+        <Square />
+        <Square />
+        <Square />
       </div>
     </>
   );
 }
 
-export default Square;
+export default Board;

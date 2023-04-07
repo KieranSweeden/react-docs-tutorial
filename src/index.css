@@ -55,6 +55,11 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+.square {
+  width: 3rem;
+  height: 3rem;
+}
+
 .board-row {
   display: flex;
   gap: 0.25rem;
