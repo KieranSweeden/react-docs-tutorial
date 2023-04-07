@@ -66,6 +66,10 @@ button:focus-visible {
   margin-bottom: 0.25rem;
 }
 
+.status {
+  margin-bottom: 1rem;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
